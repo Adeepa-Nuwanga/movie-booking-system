@@ -45,6 +45,10 @@
             <a class="nav-link" href="${pageContext.request.contextPath}/admin">
                 Admin
             </a>
+
+            <a class="nav-link" href="${pageContext.request.contextPath}/admin/queue">
+                Queue
+            </a>
             <% } %>
 
             <a class="nav-link nav-link-danger" href="${pageContext.request.contextPath}/logout">
