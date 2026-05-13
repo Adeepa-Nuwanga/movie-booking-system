@@ -1,0 +1,7 @@
+<aside class="admin-sidebar">
+    <a href="${pageContext.request.contextPath}/admin">Dashboard</a>
+    <a href="${pageContext.request.contextPath}/admin/movies">Movies</a>
+    <a href="${pageContext.request.contextPath}/admin/showtimes">Showtimes</a>
+    <a href="${pageContext.request.contextPath}/admin/queue">Queue</a>
+    <a href="${pageContext.request.contextPath}/admin/bookings">Bookings</a>
+</aside>
