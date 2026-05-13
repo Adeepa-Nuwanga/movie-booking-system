@@ -2,8 +2,14 @@
 
 <main class="login-page">
     <div class="login-card">
-        <div class="login-brand">Movie Booking</div>
+        <div class="login-brand">CineFlex</div>
         <h1>Sign in</h1>
+
+        <% if ("success".equals(request.getParameter("registered"))) { %>
+            <div class="alert alert-success" role="alert">
+                Account created successfully. Please sign in.
+            </div>
+        <% } %>
 
         <% if (request.getAttribute("error") != null) { %>
             <div class="alert alert-danger" role="alert">
@@ -27,6 +33,11 @@
             </div>
             <button type="submit" class="btn btn-danger w-100">Login</button>
         </form>
+
+        <p class="auth-link">
+            New to CineFlex?
+            <a href="${pageContext.request.contextPath}/signup">Sign up now</a>
+        </p>
 
         <div class="demo-credentials">
             <div>Demo credentials</div>

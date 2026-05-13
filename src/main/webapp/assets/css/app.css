@@ -117,6 +117,24 @@ a:hover {
     line-height: 1.6;
 }
 
+.auth-link {
+    margin: 18px 0 0;
+    color: #cfcfcf;
+    font-size: 14px;
+    text-align: center;
+}
+
+.auth-link a {
+    color: #ff4d4d;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.auth-link a:hover {
+    color: #ff6b6b;
+    text-decoration: underline;
+}
+
 @media (max-width: 576px) {
     .cinema-navbar .container {
         align-items: flex-start;
