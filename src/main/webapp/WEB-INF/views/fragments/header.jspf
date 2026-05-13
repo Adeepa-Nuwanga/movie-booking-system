@@ -25,46 +25,39 @@
 <nav class="navbar navbar-expand navbar-dark cinema-navbar">
     <div class="container">
 
-        <a class="navbar-brand"
-           href="${pageContext.request.contextPath}/movies">
+        <a class="navbar-brand" href="${pageContext.request.contextPath}/movies">
             CineFlex
         </a>
 
         <div class="navbar-nav ms-auto">
 
-            <a class="nav-link"
-               href="${pageContext.request.contextPath}/movies">
+            <a class="nav-link" href="${pageContext.request.contextPath}/movies">
                 Movies
             </a>
 
             <% if (loggedIn) { %>
 
-            <a class="nav-link"
-               href="${pageContext.request.contextPath}/my-bookings">
+            <a class="nav-link" href="${pageContext.request.contextPath}/my-bookings">
                 My Bookings
             </a>
 
             <% if (admin) { %>
-            <a class="nav-link"
-               href="${pageContext.request.contextPath}/admin">
+            <a class="nav-link" href="${pageContext.request.contextPath}/admin">
                 Admin
             </a>
             <% } %>
 
-            <a class="nav-link nav-link-danger"
-               href="${pageContext.request.contextPath}/logout">
+            <a class="nav-link nav-link-danger" href="${pageContext.request.contextPath}/logout">
                 Logout
             </a>
 
             <% } else { %>
 
-            <a class="nav-link nav-link-danger"
-               href="${pageContext.request.contextPath}/login">
+            <a class="nav-link nav-link-danger" href="${pageContext.request.contextPath}/login">
                 Login
             </a>
 
-            <a class="nav-link"
-               href="${pageContext.request.contextPath}/signup">
+            <a class="nav-link" href="${pageContext.request.contextPath}/signup">
                 Sign Up
             </a>
 
