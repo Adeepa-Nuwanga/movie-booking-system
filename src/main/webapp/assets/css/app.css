@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background: #0f0f0f;
-    color: #ffffff;
+    background: #111;
+    color: white;
     min-height: 100vh;
 }
 
@@ -20,7 +20,7 @@ a:hover {
 
 .cinema-navbar .navbar-brand {
     color: #ffffff;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .cinema-navbar .navbar-brand:hover,
@@ -29,92 +29,49 @@ a:hover {
 }
 
 .cinema-navbar .nav-link {
-    color: #f4f4f4;
+    color: #f5f5f5;
 }
 
-.admin-shell {
-    display: grid;
-    grid-template-columns: 240px minmax(0, 1fr);
+.cinema-navbar .nav-link-danger {
+    color: #ff4d4d;
+}
+
+.login-page {
     min-height: calc(100vh - 57px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    background: linear-gradient(180deg, #161616 0%, #0f0f0f 100%);
 }
 
-.admin-sidebar {
-    padding: 24px;
-    background: #0a0a0a;
-    border-right: 1px solid #2b2b2b;
-}
-
-.admin-sidebar a {
-    display: block;
-    margin-bottom: 10px;
-    padding: 12px 14px;
-    border: 1px solid #303030;
-    border-radius: 8px;
-    color: #ffffff;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.admin-sidebar a:hover {
-    border-color: #dc3545;
-    color: #ff4d4d;
-}
-
-.admin-content {
-    padding: 34px;
-}
-
-.section-kicker {
-    display: inline-block;
-    margin-bottom: 10px;
-    color: #ff4d4d;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 0;
-    text-transform: uppercase;
-}
-
-.admin-content h1 {
-    margin-bottom: 24px;
-    color: #ffffff;
-    font-weight: 900;
-}
-
-.stat-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(160px, 1fr));
-    gap: 18px;
-}
-
-.stat-card,
-.admin-form {
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 32px;
     background: #181818;
-    border: 1px solid #333333;
+    border: 1px solid #343434;
     border-radius: 8px;
-    padding: 22px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
 }
 
-.stat-card span {
-    display: block;
-    color: #cfcfcf;
-}
-
-.stat-card strong {
-    color: #ff4d4d;
-    font-size: 42px;
-    line-height: 1;
-}
-
-.admin-form {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(160px, 1fr));
-    gap: 12px;
+.login-card h1 {
     margin-bottom: 24px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
 }
 
-.admin-form textarea {
-    grid-column: span 3;
-    min-height: 44px;
+.login-brand {
+    margin-bottom: 8px;
+    color: #dc3545;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0;
+}
+
+.form-label {
+    color: #f1f1f1;
 }
 
 .form-control {
@@ -141,57 +98,58 @@ a:hover {
     border-color: #b02a37;
 }
 
-.btn-outline-light {
-    border-color: #5b5b5b;
+.demo-credentials {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid #303030;
+    color: #cfcfcf;
+    font-size: 14px;
+}
+
+.demo-credentials div {
+    margin-bottom: 6px;
     color: #ffffff;
     font-weight: 700;
 }
 
-.btn-outline-light:hover {
-    background: #ffffff;
-    color: #111111;
+.demo-credentials span {
+    display: block;
+    line-height: 1.6;
 }
 
-.admin-table {
-    border-color: #333333;
-}
-
-.admin-table input {
-    min-width: 110px;
-}
-
-.admin-actions {
-    display: flex;
-    gap: 8px;
-}
-
-.admin-note {
+.auth-link {
+    margin: 18px 0 0;
     color: #cfcfcf;
+    font-size: 14px;
+    text-align: center;
 }
 
-@media (max-width: 1000px) {
-    .admin-shell {
-        grid-template-columns: 1fr;
-    }
-
-    .admin-sidebar {
-        border-right: 0;
-        border-bottom: 1px solid #2b2b2b;
-    }
-
-    .stat-grid,
-    .admin-form {
-        grid-template-columns: 1fr 1fr;
-    }
+.auth-link a {
+    color: #ff4d4d;
+    font-weight: 700;
+    text-decoration: none;
 }
 
-@media (max-width: 640px) {
-    .stat-grid,
-    .admin-form {
-        grid-template-columns: 1fr;
+.auth-link a:hover {
+    color: #ff6b6b;
+    text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+    .cinema-navbar .container {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
     }
 
-    .admin-form textarea {
-        grid-column: auto;
+    .cinema-navbar .navbar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2px 12px;
+        margin-left: 0 !important;
+    }
+
+    .login-card {
+        padding: 24px;
     }
 }
